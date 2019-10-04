@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		663C96752347C13600AAC4A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96742347C13600AAC4A4 /* AppDelegate.swift */; };
+		663C96772347C13600AAC4A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96762347C13600AAC4A4 /* SceneDelegate.swift */; };
+		663C96792347C13600AAC4A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96782347C13600AAC4A4 /* ViewController.swift */; };
+		663C967C2347C13600AAC4A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663C967A2347C13600AAC4A4 /* Main.storyboard */; };
+		663C967F2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 663C967D2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld */; };
+		663C96812347C13800AAC4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663C96802347C13800AAC4A4 /* Assets.xcassets */; };
+		663C96842347C13800AAC4A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663C96822347C13800AAC4A4 /* LaunchScreen.storyboard */; };
+		663C968F2347C13800AAC4A4 /* TheaterConciergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C968E2347C13800AAC4A4 /* TheaterConciergeTests.swift */; };
+		663C969A2347C13800AAC4A4 /* TheaterConciergeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96992347C13800AAC4A4 /* TheaterConciergeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		663C968B2347C13800AAC4A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 663C96692347C13600AAC4A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 663C96702347C13600AAC4A4;
+			remoteInfo = TheaterConcierge;
+		};
+		663C96962347C13800AAC4A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 663C96692347C13600AAC4A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 663C96702347C13600AAC4A4;
+			remoteInfo = TheaterConcierge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		663C96712347C13600AAC4A4 /* TheaterConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheaterConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		663C96742347C13600AAC4A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		663C96762347C13600AAC4A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		663C96782347C13600AAC4A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		663C967B2347C13600AAC4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		663C967E2347C13600AAC4A4 /* TheaterConcierge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheaterConcierge.xcdatamodel; sourceTree = "<group>"; };
+		663C96802347C13800AAC4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		663C96832347C13800AAC4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		663C96852347C13800AAC4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663C968A2347C13800AAC4A4 /* TheaterConciergeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheaterConciergeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		663C968E2347C13800AAC4A4 /* TheaterConciergeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterConciergeTests.swift; sourceTree = "<group>"; };
+		663C96902347C13800AAC4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663C96952347C13800AAC4A4 /* TheaterConciergeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheaterConciergeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		663C96992347C13800AAC4A4 /* TheaterConciergeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterConciergeUITests.swift; sourceTree = "<group>"; };
+		663C969B2347C13800AAC4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		663C966E2347C13600AAC4A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663C96872347C13800AAC4A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663C96922347C13800AAC4A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		663C96682347C13600AAC4A4 = {
+			isa = PBXGroup;
+			children = (
+				663C96732347C13600AAC4A4 /* TheaterConcierge */,
+				663C968D2347C13800AAC4A4 /* TheaterConciergeTests */,
+				663C96982347C13800AAC4A4 /* TheaterConciergeUITests */,
+				663C96722347C13600AAC4A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		663C96722347C13600AAC4A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				663C96712347C13600AAC4A4 /* TheaterConcierge.app */,
+				663C968A2347C13800AAC4A4 /* TheaterConciergeTests.xctest */,
+				663C96952347C13800AAC4A4 /* TheaterConciergeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		663C96732347C13600AAC4A4 /* TheaterConcierge */ = {
+			isa = PBXGroup;
+			children = (
+				663C96742347C13600AAC4A4 /* AppDelegate.swift */,
+				663C96762347C13600AAC4A4 /* SceneDelegate.swift */,
+				663C96782347C13600AAC4A4 /* ViewController.swift */,
+				663C967A2347C13600AAC4A4 /* Main.storyboard */,
+				663C96802347C13800AAC4A4 /* Assets.xcassets */,
+				663C96822347C13800AAC4A4 /* LaunchScreen.storyboard */,
+				663C96852347C13800AAC4A4 /* Info.plist */,
+				663C967D2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld */,
+			);
+			path = TheaterConcierge;
+			sourceTree = "<group>";
+		};
+		663C968D2347C13800AAC4A4 /* TheaterConciergeTests */ = {
+			isa = PBXGroup;
+			children = (
+				663C968E2347C13800AAC4A4 /* TheaterConciergeTests.swift */,
+				663C96902347C13800AAC4A4 /* Info.plist */,
+			);
+			path = TheaterConciergeTests;
+			sourceTree = "<group>";
+		};
+		663C96982347C13800AAC4A4 /* TheaterConciergeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				663C96992347C13800AAC4A4 /* TheaterConciergeUITests.swift */,
+				663C969B2347C13800AAC4A4 /* Info.plist */,
+			);
+			path = TheaterConciergeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		663C96702347C13600AAC4A4 /* TheaterConcierge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 663C969E2347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConcierge" */;
+			buildPhases = (
+				663C966D2347C13600AAC4A4 /* Sources */,
+				663C966E2347C13600AAC4A4 /* Frameworks */,
+				663C966F2347C13600AAC4A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheaterConcierge;
+			productName = TheaterConcierge;
+			productReference = 663C96712347C13600AAC4A4 /* TheaterConcierge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		663C96892347C13800AAC4A4 /* TheaterConciergeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 663C96A12347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConciergeTests" */;
+			buildPhases = (
+				663C96862347C13800AAC4A4 /* Sources */,
+				663C96872347C13800AAC4A4 /* Frameworks */,
+				663C96882347C13800AAC4A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				663C968C2347C13800AAC4A4 /* PBXTargetDependency */,
+			);
+			name = TheaterConciergeTests;
+			productName = TheaterConciergeTests;
+			productReference = 663C968A2347C13800AAC4A4 /* TheaterConciergeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		663C96942347C13800AAC4A4 /* TheaterConciergeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 663C96A42347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConciergeUITests" */;
+			buildPhases = (
+				663C96912347C13800AAC4A4 /* Sources */,
+				663C96922347C13800AAC4A4 /* Frameworks */,
+				663C96932347C13800AAC4A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				663C96972347C13800AAC4A4 /* PBXTargetDependency */,
+			);
+			name = TheaterConciergeUITests;
+			productName = TheaterConciergeUITests;
+			productReference = 663C96952347C13800AAC4A4 /* TheaterConciergeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		663C96692347C13600AAC4A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "大林拓実";
+				TargetAttributes = {
+					663C96702347C13600AAC4A4 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					663C96892347C13800AAC4A4 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 663C96702347C13600AAC4A4;
+					};
+					663C96942347C13800AAC4A4 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 663C96702347C13600AAC4A4;
+					};
+				};
+			};
+			buildConfigurationList = 663C966C2347C13600AAC4A4 /* Build configuration list for PBXProject "TheaterConcierge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 663C96682347C13600AAC4A4;
+			productRefGroup = 663C96722347C13600AAC4A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				663C96702347C13600AAC4A4 /* TheaterConcierge */,
+				663C96892347C13800AAC4A4 /* TheaterConciergeTests */,
+				663C96942347C13800AAC4A4 /* TheaterConciergeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		663C966F2347C13600AAC4A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663C96842347C13800AAC4A4 /* LaunchScreen.storyboard in Resources */,
+				663C96812347C13800AAC4A4 /* Assets.xcassets in Resources */,
+				663C967C2347C13600AAC4A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663C96882347C13800AAC4A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663C96932347C13800AAC4A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		663C966D2347C13600AAC4A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663C96792347C13600AAC4A4 /* ViewController.swift in Sources */,
+				663C967F2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld in Sources */,
+				663C96752347C13600AAC4A4 /* AppDelegate.swift in Sources */,
+				663C96772347C13600AAC4A4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663C96862347C13800AAC4A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663C968F2347C13800AAC4A4 /* TheaterConciergeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663C96912347C13800AAC4A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663C969A2347C13800AAC4A4 /* TheaterConciergeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		663C968C2347C13800AAC4A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 663C96702347C13600AAC4A4 /* TheaterConcierge */;
+			targetProxy = 663C968B2347C13800AAC4A4 /* PBXContainerItemProxy */;
+		};
+		663C96972347C13800AAC4A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 663C96702347C13600AAC4A4 /* TheaterConcierge */;
+			targetProxy = 663C96962347C13800AAC4A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		663C967A2347C13600AAC4A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				663C967B2347C13600AAC4A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		663C96822347C13800AAC4A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				663C96832347C13800AAC4A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		663C969C2347C13800AAC4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		663C969D2347C13800AAC4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		663C969F2347C13800AAC4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JB2SDQGN3;
+				INFOPLIST_FILE = TheaterConcierge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takumiobayashi.TheaterConcierge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		663C96A02347C13800AAC4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JB2SDQGN3;
+				INFOPLIST_FILE = TheaterConcierge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takumiobayashi.TheaterConcierge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		663C96A22347C13800AAC4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JB2SDQGN3;
+				INFOPLIST_FILE = TheaterConciergeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takumiobayashi.TheaterConciergeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheaterConcierge.app/TheaterConcierge";
+			};
+			name = Debug;
+		};
+		663C96A32347C13800AAC4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JB2SDQGN3;
+				INFOPLIST_FILE = TheaterConciergeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takumiobayashi.TheaterConciergeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheaterConcierge.app/TheaterConcierge";
+			};
+			name = Release;
+		};
+		663C96A52347C13800AAC4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JB2SDQGN3;
+				INFOPLIST_FILE = TheaterConciergeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takumiobayashi.TheaterConciergeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheaterConcierge;
+			};
+			name = Debug;
+		};
+		663C96A62347C13800AAC4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JB2SDQGN3;
+				INFOPLIST_FILE = TheaterConciergeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takumiobayashi.TheaterConciergeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheaterConcierge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		663C966C2347C13600AAC4A4 /* Build configuration list for PBXProject "TheaterConcierge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663C969C2347C13800AAC4A4 /* Debug */,
+				663C969D2347C13800AAC4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		663C969E2347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConcierge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663C969F2347C13800AAC4A4 /* Debug */,
+				663C96A02347C13800AAC4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		663C96A12347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConciergeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663C96A22347C13800AAC4A4 /* Debug */,
+				663C96A32347C13800AAC4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		663C96A42347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConciergeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663C96A52347C13800AAC4A4 /* Debug */,
+				663C96A62347C13800AAC4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		663C967D2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				663C967E2347C13600AAC4A4 /* TheaterConcierge.xcdatamodel */,
+			);
+			currentVersion = 663C967E2347C13600AAC4A4 /* TheaterConcierge.xcdatamodel */;
+			path = TheaterConcierge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 663C96692347C13600AAC4A4 /* Project object */;
+}
