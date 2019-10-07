@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>713457570792-qhpp20fosdsj1u30p2prfc53077d3h04.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.713457570792-qhpp20fosdsj1u30p2prfc53077d3h04</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDXX_TPB6cbVnJgyJds_8zvGniRZIePi-Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>713457570792</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>app.takumiobayashi.TheaterConcierge</string>
+	<key>PROJECT_ID</key>
+	<string>theaterconcierge-4a5e8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>theaterconcierge-4a5e8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:713457570792:ios:83f9831b4fc41a43e54a5d</string>
+	<key>DATABASE_URL</key>
+	<string>https://theaterconcierge-4a5e8.firebaseio.com</string>
+</dict>
+</plist>

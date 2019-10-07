@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1958B7EB90114EFFBFB7573C /* Pods_TheaterConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEA4B689A007B0A98348097 /* Pods_TheaterConcierge.framework */; };
 		663C96752347C13600AAC4A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96742347C13600AAC4A4 /* AppDelegate.swift */; };
 		663C96772347C13600AAC4A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96762347C13600AAC4A4 /* SceneDelegate.swift */; };
-		663C96792347C13600AAC4A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96782347C13600AAC4A4 /* ViewController.swift */; };
+		663C96792347C13600AAC4A4 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96782347C13600AAC4A4 /* MovieListViewController.swift */; };
 		663C967C2347C13600AAC4A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663C967A2347C13600AAC4A4 /* Main.storyboard */; };
 		663C967F2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 663C967D2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld */; };
 		663C96812347C13800AAC4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663C96802347C13800AAC4A4 /* Assets.xcassets */; };
 		663C96842347C13800AAC4A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663C96822347C13800AAC4A4 /* LaunchScreen.storyboard */; };
 		663C968F2347C13800AAC4A4 /* TheaterConciergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C968E2347C13800AAC4A4 /* TheaterConciergeTests.swift */; };
 		663C969A2347C13800AAC4A4 /* TheaterConciergeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96992347C13800AAC4A4 /* TheaterConciergeUITests.swift */; };
+		663C96AD2347CCFE00AAC4A4 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96AB2347CCFE00AAC4A4 /* MovieListTableViewCell.swift */; };
+		663C96AE2347CCFE00AAC4A4 /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663C96AC2347CCFE00AAC4A4 /* MovieListTableViewCell.xib */; };
+		663C96B02347D06700AAC4A4 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C96AF2347D06700AAC4A4 /* MovieDetailViewController.swift */; };
+		6666E859234AF69C004B776D /* MovieListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6666E858234AF69C004B776D /* MovieListTableViewDataSource.swift */; };
+		6666E85D234B0001004B776D /* MovieBasicInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6666E85C234B0001004B776D /* MovieBasicInformationViewController.swift */; };
+		6666E85F234B002E004B776D /* MovieTravelRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6666E85E234B002E004B776D /* MovieTravelRouteViewController.swift */; };
+		6666E861234B0051004B776D /* MovieReviewMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6666E860234B0051004B776D /* MovieReviewMemoViewController.swift */; };
+		668CAD2E234B147700166DAC /* AddMovieScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD2D234B147700166DAC /* AddMovieScheduleViewController.swift */; };
+		668CAD30234B149700166DAC /* AddMoveScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD2F234B149700166DAC /* AddMoveScheduleViewController.swift */; };
+		668CAD36234B15BC00166DAC /* IBDesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD32234B15BC00166DAC /* IBDesignableLabel.swift */; };
+		668CAD37234B15BC00166DAC /* IBDesiganbleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD33234B15BC00166DAC /* IBDesiganbleButton.swift */; };
+		668CAD38234B15BC00166DAC /* KeyboardSlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD34234B15BC00166DAC /* KeyboardSlidingViewController.swift */; };
+		668CAD39234B15BC00166DAC /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD35234B15BC00166DAC /* IBDesignableView.swift */; };
+		668CAD3B234B1FC000166DAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 668CAD3A234B1FC000166DAC /* GoogleService-Info.plist */; };
+		677A016D75A409947E6CB85E /* Pods_TheaterConciergeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9085294967404B1F70A4C190 /* Pods_TheaterConciergeTests.framework */; };
+		CB714495EC49AF9F9C6732B3 /* Pods_TheaterConciergeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0F51E7114687A30633D0A /* Pods_TheaterConciergeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550A3DA1E9F64ACDB81C461A /* Pods-TheaterConciergeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheaterConciergeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheaterConciergeUITests/Pods-TheaterConciergeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		56AF6A8737642E8C3151ED76 /* Pods-TheaterConciergeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheaterConciergeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheaterConciergeTests/Pods-TheaterConciergeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		663C96712347C13600AAC4A4 /* TheaterConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheaterConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		663C96742347C13600AAC4A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		663C96762347C13600AAC4A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		663C96782347C13600AAC4A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		663C96782347C13600AAC4A4 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		663C967B2347C13600AAC4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		663C967E2347C13600AAC4A4 /* TheaterConcierge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheaterConcierge.xcdatamodel; sourceTree = "<group>"; };
 		663C96802347C13800AAC4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +70,27 @@
 		663C96952347C13800AAC4A4 /* TheaterConciergeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheaterConciergeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		663C96992347C13800AAC4A4 /* TheaterConciergeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterConciergeUITests.swift; sourceTree = "<group>"; };
 		663C969B2347C13800AAC4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663C96AB2347CCFE00AAC4A4 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
+		663C96AC2347CCFE00AAC4A4 /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
+		663C96AF2347D06700AAC4A4 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		6666E858234AF69C004B776D /* MovieListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewDataSource.swift; sourceTree = "<group>"; };
+		6666E85C234B0001004B776D /* MovieBasicInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBasicInformationViewController.swift; sourceTree = "<group>"; };
+		6666E85E234B002E004B776D /* MovieTravelRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTravelRouteViewController.swift; sourceTree = "<group>"; };
+		6666E860234B0051004B776D /* MovieReviewMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewMemoViewController.swift; sourceTree = "<group>"; };
+		668CAD2D234B147700166DAC /* AddMovieScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScheduleViewController.swift; sourceTree = "<group>"; };
+		668CAD2F234B149700166DAC /* AddMoveScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoveScheduleViewController.swift; sourceTree = "<group>"; };
+		668CAD32234B15BC00166DAC /* IBDesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableLabel.swift; sourceTree = "<group>"; };
+		668CAD33234B15BC00166DAC /* IBDesiganbleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesiganbleButton.swift; sourceTree = "<group>"; };
+		668CAD34234B15BC00166DAC /* KeyboardSlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardSlidingViewController.swift; sourceTree = "<group>"; };
+		668CAD35234B15BC00166DAC /* IBDesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
+		668CAD3A234B1FC000166DAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84E0F51E7114687A30633D0A /* Pods_TheaterConciergeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheaterConciergeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0EFF7E2AECE67BDE9659AE /* Pods-TheaterConciergeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheaterConciergeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheaterConciergeUITests/Pods-TheaterConciergeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9085294967404B1F70A4C190 /* Pods_TheaterConciergeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheaterConciergeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D60F1653D26D5D10C80BD4 /* Pods-TheaterConcierge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheaterConcierge.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheaterConcierge/Pods-TheaterConcierge.release.xcconfig"; sourceTree = "<group>"; };
+		BA4F648C6B3EF0E67C2F0A65 /* Pods-TheaterConciergeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheaterConciergeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheaterConciergeTests/Pods-TheaterConciergeTests.release.xcconfig"; sourceTree = "<group>"; };
+		DA7B0DB67179BAA62FB595D8 /* Pods-TheaterConcierge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheaterConcierge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheaterConcierge/Pods-TheaterConcierge.debug.xcconfig"; sourceTree = "<group>"; };
+		DDEA4B689A007B0A98348097 /* Pods_TheaterConcierge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheaterConcierge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1958B7EB90114EFFBFB7573C /* Pods_TheaterConcierge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677A016D75A409947E6CB85E /* Pods_TheaterConciergeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +114,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB714495EC49AF9F9C6732B3 /* Pods_TheaterConciergeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F00F1D3A496BD713F688AE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA7B0DB67179BAA62FB595D8 /* Pods-TheaterConcierge.debug.xcconfig */,
+				95D60F1653D26D5D10C80BD4 /* Pods-TheaterConcierge.release.xcconfig */,
+				56AF6A8737642E8C3151ED76 /* Pods-TheaterConciergeTests.debug.xcconfig */,
+				BA4F648C6B3EF0E67C2F0A65 /* Pods-TheaterConciergeTests.release.xcconfig */,
+				550A3DA1E9F64ACDB81C461A /* Pods-TheaterConciergeUITests.debug.xcconfig */,
+				8A0EFF7E2AECE67BDE9659AE /* Pods-TheaterConciergeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		663C96682347C13600AAC4A4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +141,8 @@
 				663C968D2347C13800AAC4A4 /* TheaterConciergeTests */,
 				663C96982347C13800AAC4A4 /* TheaterConciergeUITests */,
 				663C96722347C13600AAC4A4 /* Products */,
+				1F00F1D3A496BD713F688AE5 /* Pods */,
+				A8D3404DD36ECF102588F235 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,11 +161,14 @@
 			children = (
 				663C96742347C13600AAC4A4 /* AppDelegate.swift */,
 				663C96762347C13600AAC4A4 /* SceneDelegate.swift */,
-				663C96782347C13600AAC4A4 /* ViewController.swift */,
-				663C967A2347C13600AAC4A4 /* Main.storyboard */,
+				663C96A92347C90D00AAC4A4 /* UserInterface */,
+				663C96AA2347CC1000AAC4A4 /* ViewController */,
+				6666E85B234AFF9A004B776D /* View */,
+				6666E85A234AF724004B776D /* Model */,
+				668CAD31234B15BC00166DAC /* Extensions */,
 				663C96802347C13800AAC4A4 /* Assets.xcassets */,
-				663C96822347C13800AAC4A4 /* LaunchScreen.storyboard */,
 				663C96852347C13800AAC4A4 /* Info.plist */,
+				668CAD3A234B1FC000166DAC /* GoogleService-Info.plist */,
 				663C967D2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld */,
 			);
 			path = TheaterConcierge;
@@ -131,6 +192,67 @@
 			path = TheaterConciergeUITests;
 			sourceTree = "<group>";
 		};
+		663C96A92347C90D00AAC4A4 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				663C96822347C13800AAC4A4 /* LaunchScreen.storyboard */,
+				663C967A2347C13600AAC4A4 /* Main.storyboard */,
+				663C96AC2347CCFE00AAC4A4 /* MovieListTableViewCell.xib */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		663C96AA2347CC1000AAC4A4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				663C96782347C13600AAC4A4 /* MovieListViewController.swift */,
+				663C96AF2347D06700AAC4A4 /* MovieDetailViewController.swift */,
+				668CAD2D234B147700166DAC /* AddMovieScheduleViewController.swift */,
+				668CAD2F234B149700166DAC /* AddMoveScheduleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6666E85A234AF724004B776D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6666E858234AF69C004B776D /* MovieListTableViewDataSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6666E85B234AFF9A004B776D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				663C96AB2347CCFE00AAC4A4 /* MovieListTableViewCell.swift */,
+				6666E85C234B0001004B776D /* MovieBasicInformationViewController.swift */,
+				6666E85E234B002E004B776D /* MovieTravelRouteViewController.swift */,
+				6666E860234B0051004B776D /* MovieReviewMemoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		668CAD31234B15BC00166DAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				668CAD32234B15BC00166DAC /* IBDesignableLabel.swift */,
+				668CAD33234B15BC00166DAC /* IBDesiganbleButton.swift */,
+				668CAD34234B15BC00166DAC /* KeyboardSlidingViewController.swift */,
+				668CAD35234B15BC00166DAC /* IBDesignableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8D3404DD36ECF102588F235 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDEA4B689A007B0A98348097 /* Pods_TheaterConcierge.framework */,
+				9085294967404B1F70A4C190 /* Pods_TheaterConciergeTests.framework */,
+				84E0F51E7114687A30633D0A /* Pods_TheaterConciergeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 663C969E2347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConcierge" */;
 			buildPhases = (
+				BF2784C54EA4BF3721D685D6 /* [CP] Check Pods Manifest.lock */,
 				663C966D2347C13600AAC4A4 /* Sources */,
 				663C966E2347C13600AAC4A4 /* Frameworks */,
 				663C966F2347C13600AAC4A4 /* Resources */,
+				FBEBB4503975E5D22DF3ADAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 663C96A12347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConciergeTests" */;
 			buildPhases = (
+				EC6FAF50BE545877CD1E258E /* [CP] Check Pods Manifest.lock */,
 				663C96862347C13800AAC4A4 /* Sources */,
 				663C96872347C13800AAC4A4 /* Frameworks */,
 				663C96882347C13800AAC4A4 /* Resources */,
@@ -173,6 +298,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 663C96A42347C13800AAC4A4 /* Build configuration list for PBXNativeTarget "TheaterConciergeUITests" */;
 			buildPhases = (
+				F5F1FE4183586580D5AE10B8 /* [CP] Check Pods Manifest.lock */,
 				663C96912347C13800AAC4A4 /* Sources */,
 				663C96922347C13800AAC4A4 /* Frameworks */,
 				663C96932347C13800AAC4A4 /* Resources */,
@@ -235,7 +361,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663C96AE2347CCFE00AAC4A4 /* MovieListTableViewCell.xib in Resources */,
 				663C96842347C13800AAC4A4 /* LaunchScreen.storyboard in Resources */,
+				668CAD3B234B1FC000166DAC /* GoogleService-Info.plist in Resources */,
 				663C96812347C13800AAC4A4 /* Assets.xcassets in Resources */,
 				663C967C2347C13600AAC4A4 /* Main.storyboard in Resources */,
 			);
@@ -257,15 +385,114 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF2784C54EA4BF3721D685D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheaterConcierge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC6FAF50BE545877CD1E258E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheaterConciergeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5F1FE4183586580D5AE10B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheaterConciergeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBEBB4503975E5D22DF3ADAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheaterConcierge/Pods-TheaterConcierge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheaterConcierge/Pods-TheaterConcierge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		663C966D2347C13600AAC4A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				663C96792347C13600AAC4A4 /* ViewController.swift in Sources */,
+				663C96792347C13600AAC4A4 /* MovieListViewController.swift in Sources */,
 				663C967F2347C13600AAC4A4 /* TheaterConcierge.xcdatamodeld in Sources */,
 				663C96752347C13600AAC4A4 /* AppDelegate.swift in Sources */,
+				6666E85D234B0001004B776D /* MovieBasicInformationViewController.swift in Sources */,
+				668CAD36234B15BC00166DAC /* IBDesignableLabel.swift in Sources */,
+				668CAD39234B15BC00166DAC /* IBDesignableView.swift in Sources */,
+				6666E85F234B002E004B776D /* MovieTravelRouteViewController.swift in Sources */,
+				663C96AD2347CCFE00AAC4A4 /* MovieListTableViewCell.swift in Sources */,
+				663C96B02347D06700AAC4A4 /* MovieDetailViewController.swift in Sources */,
+				668CAD37234B15BC00166DAC /* IBDesiganbleButton.swift in Sources */,
+				6666E861234B0051004B776D /* MovieReviewMemoViewController.swift in Sources */,
 				663C96772347C13600AAC4A4 /* SceneDelegate.swift in Sources */,
+				668CAD2E234B147700166DAC /* AddMovieScheduleViewController.swift in Sources */,
+				668CAD38234B15BC00166DAC /* KeyboardSlidingViewController.swift in Sources */,
+				668CAD30234B149700166DAC /* AddMoveScheduleViewController.swift in Sources */,
+				6666E859234AF69C004B776D /* MovieListTableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,16 +663,18 @@
 		};
 		663C969F2347C13800AAC4A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA7B0DB67179BAA62FB595D8 /* Pods-TheaterConcierge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JB2SDQGN3;
 				INFOPLIST_FILE = TheaterConcierge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.takumiobayashi.TheaterConcierge;
+				PRODUCT_BUNDLE_IDENTIFIER = app.takumiobayashi.TheaterConcierge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,16 +683,18 @@
 		};
 		663C96A02347C13800AAC4A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95D60F1653D26D5D10C80BD4 /* Pods-TheaterConcierge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JB2SDQGN3;
 				INFOPLIST_FILE = TheaterConcierge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.takumiobayashi.TheaterConcierge;
+				PRODUCT_BUNDLE_IDENTIFIER = app.takumiobayashi.TheaterConcierge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,6 +703,7 @@
 		};
 		663C96A22347C13800AAC4A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56AF6A8737642E8C3151ED76 /* Pods-TheaterConciergeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +726,7 @@
 		};
 		663C96A32347C13800AAC4A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA4F648C6B3EF0E67C2F0A65 /* Pods-TheaterConciergeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +749,7 @@
 		};
 		663C96A52347C13800AAC4A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550A3DA1E9F64ACDB81C461A /* Pods-TheaterConciergeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +770,7 @@
 		};
 		663C96A62347C13800AAC4A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A0EFF7E2AECE67BDE9659AE /* Pods-TheaterConciergeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
