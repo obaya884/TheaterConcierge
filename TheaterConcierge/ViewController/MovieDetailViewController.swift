@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
-class MovieDetailViewController: UIViewController {
+final class MovieDetailViewController: UIViewController {
     
+    private let firebaseManager = FirebaseManager.shared
+
     @IBOutlet private var segmentControl: UISegmentedControl!
     @IBOutlet private var containerView: UIView!
-    
+
+    private let movieListOrder: Int = Defaults[.movieListOrder]
+
     private lazy var movieBasicInformationViewController: MovieBasicInformationViewController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -54,11 +59,18 @@ class MovieDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = FirebaseManager.shared.movieInfoArray[movieListOrder].movieTitle
 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
-
+        
         setupView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        firebaseManager.fetchMovieInfo(){
+            NotificationCenter.default.post(name: .firestoreInitialLoadingFinishNotification, object: nil)
+        }
     }
     
     private func updateView() {

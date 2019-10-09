@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class KeyboardSlidingViewController: UIViewController, UITextFieldDelegate {
+public class KeyboardSlidingViewController: UIViewController, UITextFieldDelegate {
     // 編集中のTextFieldを保持する変数
     private var activeTextField: UITextField? = nil
 
@@ -17,11 +17,6 @@ class KeyboardSlidingViewController: UIViewController, UITextFieldDelegate {
         // 編集対象のTextFieldを保存する
         activeTextField = textField
         return true;
-    }
-
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
 
     // NotificationCenterからのキーボード表示通知に伴う処理

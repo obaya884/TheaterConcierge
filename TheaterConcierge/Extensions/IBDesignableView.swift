@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class IBDesignableView: UIView {
+@IBDesignable final class IBDesignableView: UIView {
 
     // 角丸の半径(0で四角形)
     @IBInspectable var cornerRadius: CGFloat = 0.0

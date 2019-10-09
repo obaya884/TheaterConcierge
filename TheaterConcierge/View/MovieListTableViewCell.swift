@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieListTableViewCell: UITableViewCell {
+final class MovieListTableViewCell: UITableViewCell {
     
     @IBOutlet var movieTitleLabel: UILabel!
     @IBOutlet var appreciationDateLabel: UILabel!

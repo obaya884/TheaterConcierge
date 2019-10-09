@@ -7,24 +7,28 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
-class MovieBasicInformationViewController: UIViewController {
+final class MovieBasicInformationViewController: UIViewController {
+
+    private let movieInfoArray = FirebaseManager.shared.movieInfoArray
+    private let movieListOrder: Int = Defaults[.movieListOrder]
+    
+    @IBOutlet private var appreciationDateLabel: UILabel!
+    @IBOutlet private var appreciationTimeLabel: UILabel!
+    @IBOutlet private var theaterNameLabel: UILabel!
+    @IBOutlet private var sheetNumberLabel: UILabel!
+    @IBOutlet private var confirmationNumberLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let movieInfo = movieInfoArray[movieListOrder]
+        appreciationDateLabel.text = movieInfo.appreciationDate
+        appreciationTimeLabel.text = movieInfo.appreciationTime
+        theaterNameLabel.text = movieInfo.theaterName
+        sheetNumberLabel.text = movieInfo.sheetNumber
+        confirmationNumberLabel.text = movieInfo.confirmationNumber
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

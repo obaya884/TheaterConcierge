@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        let firebaseManager = FirebaseManager.shared
+        firebaseManager.anonymousLogIn{
+            firebaseManager.fetchMovieInfo(){
+                NotificationCenter.default.post(name: .firestoreInitialLoadingFinishNotification, object: nil)
+            }
+        }
         return true
     }
 

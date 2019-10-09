@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class IBDesignableButton: UIButton {
+@IBDesignable final class IBDesignableButton: UIButton {
     
     // 角丸の半径(0で四角形)
     @IBInspectable var cornerRadius: CGFloat = 0.0

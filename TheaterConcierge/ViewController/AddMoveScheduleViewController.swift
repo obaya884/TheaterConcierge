@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddMoveScheduleViewController: UIViewController {
+final class AddMoveScheduleViewController: UIViewController {
     
     @IBOutlet private var departureTimeTextField: UITextField!
     @IBOutlet private var arrivalTimeTextField: UITextField!

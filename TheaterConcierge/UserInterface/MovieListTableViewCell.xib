@@ -17,14 +17,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作品名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLt-i3-A2a">
-                        <rect key="frame" x="16" y="11" width="52" height="21"/>
+                        <rect key="frame" x="16" y="11" width="315" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2019/10/12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0es-b8-GkS">
-                        <rect key="frame" x="16" y="37" width="76" height="18"/>
+                        <rect key="frame" x="16" y="37" width="89" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,7 +44,7 @@
                 <outlet property="appreciationDateLabel" destination="0es-b8-GkS" id="C58-wz-7Vx"/>
                 <outlet property="movieTitleLabel" destination="DLt-i3-A2a" id="jF7-HU-l9o"/>
             </connections>
-            <point key="canvasLocation" x="139" y="115"/>
+            <point key="canvasLocation" x="138.40579710144928" y="114.50892857142857"/>
         </tableViewCell>
     </objects>
 </document>

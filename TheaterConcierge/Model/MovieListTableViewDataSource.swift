@@ -10,13 +10,19 @@ import Foundation
 import UIKit
 
 final class MovieListTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
-        
+    
+    private let firebaseManager = FirebaseManager.shared
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        print(firebaseManager.movieInfoArray.count)
+        return firebaseManager.movieInfoArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieListTableViewCell") as! MovieListTableViewCell
+        
+        cell.movieTitleLabel.text = firebaseManager.movieInfoArray[indexPath.row].movieTitle
+        cell.appreciationDateLabel.text = firebaseManager.movieInfoArray[indexPath.row].appreciationDate
         
         return cell
     }

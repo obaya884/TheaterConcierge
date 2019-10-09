@@ -7,29 +7,33 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
-class MovieListViewController: UIViewController {
+final class MovieListViewController: UIViewController {
     
     private var datasource: MovieListTableViewDataSource?
+    private let firebaseManager = FirebaseManager.shared
 
     @IBOutlet private var movieListTableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
-                
-        setupTableView()
-        movieListTableView.delegate = self
-
+        
     }
     
-    func setupTableView() {
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setupTableView(_:)), name: .firestoreInitialLoadingFinishNotification, object: nil)
+    }
+
+    @objc func setupTableView(_ notification: Notification) {
         datasource = MovieListTableViewDataSource()
         movieListTableView.register(UINib(nibName: "MovieListTableViewCell", bundle: nil), forCellReuseIdentifier: "movieListTableViewCell")
         movieListTableView.delegate = datasource
         movieListTableView.dataSource = datasource
+        movieListTableView.reloadData()
+        movieListTableView.delegate = self
     }
     
     @IBAction func goToAddScene() {
@@ -39,6 +43,7 @@ class MovieListViewController: UIViewController {
 
 extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Defaults[.movieListOrder] = indexPath.row
         self.performSegue(withIdentifier: "MovieDetailViewControllerSegue", sender: nil)
     }
 }
