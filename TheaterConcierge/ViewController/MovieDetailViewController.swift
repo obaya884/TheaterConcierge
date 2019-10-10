@@ -8,10 +8,13 @@
 
 import UIKit
 import SwiftyUserDefaults
+import CoreLocation
 
 final class MovieDetailViewController: UIViewController {
     
     private let firebaseManager = FirebaseManager.shared
+    private var locationManager: CLLocationManager?
+
 
     @IBOutlet private var segmentControl: UISegmentedControl!
     @IBOutlet private var containerView: UIView!
@@ -92,7 +95,7 @@ final class MovieDetailViewController: UIViewController {
         }
     }
     
-    func setupView() {
+    private func setupView() {
         updateView()
     }
     

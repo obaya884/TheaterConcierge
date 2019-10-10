@@ -10,5 +10,6 @@ import Foundation
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    public static let movieListOrder =  DefaultsKey<Int>("movieListOrder", defaultValue: 0)
+    public static let movieListOrder = DefaultsKey<Int>("movieListOrder", defaultValue: 0)
+    public static let currentAddress = DefaultsKey<String>("cuurentAddress", defaultValue: "")
 }

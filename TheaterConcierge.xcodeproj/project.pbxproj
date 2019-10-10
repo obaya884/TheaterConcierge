@@ -28,7 +28,6 @@
 		667AA1D7234D05E30026E9FD /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667AA1D6234D05E30026E9FD /* DefaultsKeys.swift */; };
 		667AA1D9234D0F5E0026E9FD /* ReviewMemoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667AA1D8234D0F5D0026E9FD /* ReviewMemoTextView.swift */; };
 		668CAD2E234B147700166DAC /* AddMovieScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD2D234B147700166DAC /* AddMovieScheduleViewController.swift */; };
-		668CAD30234B149700166DAC /* AddMoveScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD2F234B149700166DAC /* AddMoveScheduleViewController.swift */; };
 		668CAD36234B15BC00166DAC /* IBDesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD32234B15BC00166DAC /* IBDesignableLabel.swift */; };
 		668CAD37234B15BC00166DAC /* IBDesiganbleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD33234B15BC00166DAC /* IBDesiganbleButton.swift */; };
 		668CAD38234B15BC00166DAC /* KeyboardSlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CAD34234B15BC00166DAC /* KeyboardSlidingViewController.swift */; };
@@ -86,7 +85,6 @@
 		667AA1D6234D05E30026E9FD /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		667AA1D8234D0F5D0026E9FD /* ReviewMemoTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMemoTextView.swift; sourceTree = "<group>"; };
 		668CAD2D234B147700166DAC /* AddMovieScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScheduleViewController.swift; sourceTree = "<group>"; };
-		668CAD2F234B149700166DAC /* AddMoveScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoveScheduleViewController.swift; sourceTree = "<group>"; };
 		668CAD32234B15BC00166DAC /* IBDesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableLabel.swift; sourceTree = "<group>"; };
 		668CAD33234B15BC00166DAC /* IBDesiganbleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesiganbleButton.swift; sourceTree = "<group>"; };
 		668CAD34234B15BC00166DAC /* KeyboardSlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardSlidingViewController.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				663C96782347C13600AAC4A4 /* MovieListViewController.swift */,
 				663C96AF2347D06700AAC4A4 /* MovieDetailViewController.swift */,
 				668CAD2D234B147700166DAC /* AddMovieScheduleViewController.swift */,
-				668CAD2F234B149700166DAC /* AddMoveScheduleViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -515,7 +512,6 @@
 				663C96772347C13600AAC4A4 /* SceneDelegate.swift in Sources */,
 				668CAD2E234B147700166DAC /* AddMovieScheduleViewController.swift in Sources */,
 				668CAD38234B15BC00166DAC /* KeyboardSlidingViewController.swift in Sources */,
-				668CAD30234B149700166DAC /* AddMoveScheduleViewController.swift in Sources */,
 				6666E859234AF69C004B776D /* MovieListTableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

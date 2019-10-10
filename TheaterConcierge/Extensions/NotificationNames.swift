@@ -10,4 +10,6 @@ import Foundation
 
 extension Notification.Name {
     static let firestoreInitialLoadingFinishNotification = Notification.Name("firestoreInitialLoadingFinishNotification")
+    
+    static let getCurrentAddressFinishNotification = Notification.Name("getCurrentAddressFinishNotification")
 }

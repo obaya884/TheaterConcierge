@@ -24,6 +24,7 @@ final class MovieListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(self.setupTableView(_:)), name: .firestoreInitialLoadingFinishNotification, object: nil)
     }
 

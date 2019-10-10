@@ -41,6 +41,13 @@ final class AddMovieScheduleViewController: UIViewController {
         sheetNumberTextField.returnKeyType = .next
         confirmationNumberTextField.returnKeyType = .done
 
+        movieTitleTextField.keyboardType = .default
+        appreciationDateTextField.keyboardType = .default
+        appreciationTimeTextField.keyboardType = .default
+        theaterNameTextField.keyboardType = .default
+        sheetNumberTextField.keyboardType = .default
+        confirmationNumberTextField.keyboardType = .numberPad
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
