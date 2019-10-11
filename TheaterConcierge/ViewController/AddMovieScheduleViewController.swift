@@ -24,7 +24,6 @@ final class AddMovieScheduleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationItem.largeTitleDisplayMode = .never
         
         movieTitleTextField.delegate = self
@@ -47,7 +46,6 @@ final class AddMovieScheduleViewController: UIViewController {
         theaterNameTextField.keyboardType = .default
         sheetNumberTextField.keyboardType = .default
         confirmationNumberTextField.keyboardType = .numberPad
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,26 +62,79 @@ final class AddMovieScheduleViewController: UIViewController {
         }
     }
     
-    @IBAction func fetchDataFromGmail() {
-        
-    }
-    
-    @IBAction func goToAddMoveShedule() {
-        self.performSegue(withIdentifier: "AddMoveScheduleViewControllerSegue", sender: nil)
-    }
-    
     @IBAction func addMovieSchedule() {
-        //TODO: 入力チェック
+
+        var postAvailableFlag: Bool = true
+
+        // 日付と時刻を正規表現でマッチング
+        let appreciationDate = appreciationDateTextField.text!
+        let appreciationTime = appreciationTimeTextField.text!
         
-        let newMovieInfo = MovieInformation(movieTitle: movieTitleTextField.text!,
-                                            appreciationDate: appreciationDateTextField.text!,
-                                            appreciationTime: appreciationTimeTextField.text!,
-                                            theaterName: theaterNameTextField.text!,
-                                            sheetNumber: sheetNumberTextField.text!,
-                                            confirmationNumber: confirmationNumberTextField.text!,
-                                            reviewMemo: "")
-        print(newMovieInfo)
-        firebaseManager.postMovieInfo(movieInfo: newMovieInfo)
+        // TODO: この記法なんだ
+        let dateCheckResult = appreciationDate.range(of: "^\\d{4}\\/\\d{2}\\/\\d{2}$", options: .regularExpression) != nil
+        let timeCheckResult = appreciationTime.range(of: "^\\d{2}:\\d{2}$", options: .regularExpression) != nil
+        
+        if !dateCheckResult {
+            postAvailableFlag = false
+            appreciationDateTextField.backgroundColor = .red
+        }
+        else {
+            appreciationDateTextField.backgroundColor = .white
+        }
+        
+        if !timeCheckResult {
+            postAvailableFlag = false
+            appreciationTimeTextField.backgroundColor = .red
+        }
+        else {
+            appreciationTimeTextField.backgroundColor = .white
+        }
+        
+        // その他入力項目が空文字でないかチェック
+        if movieTitleTextField.text == "" {
+            postAvailableFlag = false
+            movieTitleTextField.backgroundColor = .red
+        }
+        else {
+            movieTitleTextField.backgroundColor = .white
+        }
+        
+        if theaterNameTextField.text == "" {
+            postAvailableFlag = false
+            theaterNameTextField.backgroundColor = .red
+        }
+        else {
+            theaterNameTextField.backgroundColor = .white
+        }
+        
+        if sheetNumberTextField.text == "" {
+            postAvailableFlag = false
+            sheetNumberTextField.backgroundColor = .red
+        }
+        else {
+            sheetNumberTextField.backgroundColor = .white
+        }
+        
+        if confirmationNumberTextField.text == "" {
+            postAvailableFlag = false
+            confirmationNumberTextField.backgroundColor = .red
+        }
+        else {
+            confirmationNumberTextField.backgroundColor = .white
+        }
+        
+        if postAvailableFlag {
+            let newMovieInfo = MovieInformation(movieTitle: movieTitleTextField.text!,
+                                                appreciationDate: appreciationDateTextField.text!,
+                                                appreciationTime: appreciationTimeTextField.text!,
+                                                theaterName: theaterNameTextField.text!,
+                                                sheetNumber: sheetNumberTextField.text!,
+                                                confirmationNumber: confirmationNumberTextField.text!,
+                                                reviewMemo: "")
+            print(newMovieInfo)
+            firebaseManager.postMovieInfo(movieInfo: newMovieInfo)
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
 
@@ -95,11 +146,24 @@ extension AddMovieScheduleViewController: UITextFieldDelegate {
         
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
-
         toolBar.sizeToFit()
+        
+        let angleUpButton = UIButton()
+        angleUpButton.titleLabel?.font = UIFont(name: "FontAwesome5Free-Solid", size: 17)
+        angleUpButton.setTitle("angle-up", for: .normal)
+        angleUpButton.setTitleColor(.systemBlue, for: .normal)
+        angleUpButton.sizeToFit()
+        angleUpButton.addTarget(self, action: #selector(tapLeft), for: .touchUpInside)
+        
+        let angleDownButton = UIButton()
+        angleDownButton.titleLabel?.font = UIFont(name: "FontAwesome5Free-Solid", size: 17)
+        angleDownButton.setTitle("angle-down", for: .normal)
+        angleDownButton.setTitleColor(.systemBlue, for: .normal)
+        angleDownButton.sizeToFit()
+        angleDownButton.addTarget(self, action: #selector(tapRight), for: .touchUpInside)
 
-        let left = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(tapLeft))
-        let right = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(tapRight))
+        let left = UIBarButtonItem(customView: angleUpButton)
+        let right = UIBarButtonItem(customView: angleDownButton)
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDone))
 

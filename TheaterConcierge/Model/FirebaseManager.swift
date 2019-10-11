@@ -82,7 +82,7 @@ final class FirebaseManager: NSObject {
         }
     }
     
-    //TODO: ガチガチクエリ検索にしてるけどどこかでid取れてる方が良いのかも
+    //FIXME: ガチガチクエリ検索にしてるけどどこかでid取れてる方が良いのかも
     // 編集レビューの更新
     func updateReviewMemo(movieInfo: MovieInformation) {
         // 編集されたものと同一のドキュメントをクエリ検索

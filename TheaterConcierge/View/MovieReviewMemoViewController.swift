@@ -56,7 +56,6 @@ final class MovieReviewMemoViewController: UIViewController {
     
     // 画面外をタッチした時にキーボードをしまう
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            // どのtextview編集に対しても閉じれるようにviewに対してendEditngする
             self.view.endEditing(true)
     }
 
@@ -69,12 +68,6 @@ extension MovieReviewMemoViewController: UITextViewDelegate {
         placeholderLabel.isHidden = textView.text.isEmpty ? false : true
     }
     
-    // 編集終了時にキーボードを下げる
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-
     // 編集終了後に更新内容をfirestoreにポスト
     func textViewDidEndEditing(_ textView: UITextView) {
         let preMovieInfo = movieInfoArray[movieListOrder]

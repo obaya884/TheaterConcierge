@@ -18,44 +18,39 @@ final class MovieTravelRouteViewController: UIViewController {
     private let movieInfoArray = FirebaseManager.shared.movieInfoArray
     private let movieListOrder: Int = Defaults[.movieListOrder]
     
-//    private var currentAddress: String = FirebaseManager.shared.currentAddress
-    private var currentAddress: String = ""
+    private var currentAddress = LocationManager.sharedInstance.currentAddress
     
     @IBOutlet var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationManager = CLLocationManager() // インスタンスの生成
-        locationManager?.delegate = self
-        
-        // TODO: レスポンスめっちゃ遅い
-        locationManager?.requestLocation()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(routeSearchByYahooTransit), name: .getCurrentAddressFinishNotification, object: nil)
-
+        routeSearchByYahooTransit()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
-    
-    @objc func routeSearchByYahooTransit() {
+        
+    func routeSearchByYahooTransit() {
         let movieInfo = movieInfoArray[movieListOrder]
         
+        // 上映日時をDate型に変換
+        let dateString = movieInfo.appreciationDate + " " + movieInfo.appreciationTime
+        let appreciationDateAndTime = dateFromString(string: dateString, format: "yyyy/MM/dd HH:mm")
+        //Date演算(20分前にする)
+        let modifiedDate = Calendar.current.date(byAdding: .minute, value: -20, to: appreciationDateAndTime)!
+        // Strng型に再変換
+        let modifiedDateString = stringFromDate(date: modifiedDate, format: "yyyy/MM/dd HH:mm")
+        let modifiedAppreciationDate = modifiedDateString.prefix(10)
+        let modifiedAppreciationTime = modifiedDateString.suffix(5)
+        
+        // URLパラメータ生成
         let from: String = "?from=" + currentAddress
         let to: String = "&to=" + movieInfo.theaterName
         
-        let appreciationDate = movieInfo.appreciationDate
-        let year: String = "&y=" + String(appreciationDate.prefix(4))
-        let month: String = "&m=" + String(appreciationDate[appreciationDate.index(appreciationDate.startIndex, offsetBy: 5)...appreciationDate.index(appreciationDate.startIndex, offsetBy: 6)])
-        let day: String = "&d=" + String(appreciationDate[appreciationDate.index(appreciationDate.startIndex, offsetBy: 8)...appreciationDate.index(appreciationDate.startIndex, offsetBy: 9)])
+        let year: String = "&y=" + String(modifiedAppreciationDate.prefix(4))
+        let month: String = "&m=" + String(modifiedAppreciationDate[modifiedAppreciationDate.index(modifiedAppreciationDate.startIndex, offsetBy: 5)...modifiedAppreciationDate.index(modifiedAppreciationDate.startIndex, offsetBy: 6)])
+        let day: String = "&d=" + String(modifiedAppreciationDate[modifiedAppreciationDate.index(modifiedAppreciationDate.startIndex, offsetBy: 8)...modifiedAppreciationDate.index(modifiedAppreciationDate.startIndex, offsetBy: 9)])
         
-        let appreciationTime = movieInfo.appreciationTime
-        let hour = "&hh=" + appreciationTime.prefix(2)
-        let minute_1 = "&m1=" + String(appreciationTime[appreciationTime.index(appreciationTime.startIndex, offsetBy: 3)...appreciationTime.index(appreciationTime.startIndex, offsetBy: 3)])
-        let minute_2 = "&m2=" + appreciationTime.suffix(1)
+        let hour = "&hh=" + modifiedAppreciationTime.prefix(2)
+        let minute_1 = "&m1=" + String(modifiedAppreciationTime[modifiedAppreciationTime.index(modifiedAppreciationTime.startIndex, offsetBy: 3)...modifiedAppreciationTime.index(modifiedAppreciationTime.startIndex, offsetBy: 3)])
+        let minute_2 = "&m2=" + modifiedAppreciationTime.suffix(1)
         
         let keyword = "&kw=" + movieInfo.theaterName
         
@@ -68,47 +63,22 @@ final class MovieTravelRouteViewController: UIViewController {
             webView.load(request as URLRequest)
         }
     }
-
-}
-
-extension MovieTravelRouteViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined:
-            locationManager?.requestWhenInUseAuthorization() // 起動中のみの取得許可を求める
-            break
-        case .denied:
-            // 「設定 > プライバシー > 位置情報サービス で、位置情報サービスの利用を許可して下さい」を表示する
-            break
-        case .restricted:
-            // 「このアプリは、位置情報を取得できないために、正常に動作できません」を表示する
-            break
-        case .authorizedAlways:
-            break
-        case .authorizedWhenInUse:
-            break
-        @unknown default:
-            fatalError()
-        }
+    
+    //MARK: 日時変換
+    func stringFromDate(date: Date, format: String) -> String {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
+    
+    func dateFromString(string: String, format: String) -> Date {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = format
+        return formatter.date(from: string)!
     }
 
-    // requestLocation()を使用する場合、失敗した際のDelegateメソッドの実装が必須
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("位置情報の取得に失敗しました")
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return }
-
-        CLGeocoder().reverseGeocodeLocation(location) { [unowned self] placemarks, error in
-            guard let placemark = placemarks?.first, error == nil else { return }
-            // TODO: subThoroughfareまで取れないことがある
-            self.currentAddress = placemark.administrativeArea!
-                             + placemark.locality!
-                             + placemark.thoroughfare!
-                             + placemark.subThoroughfare!
-            print(self.currentAddress)
-            NotificationCenter.default.post(name: .getCurrentAddressFinishNotification, object: nil)
-        }
-       }
 }

@@ -12,10 +12,12 @@ final class MovieListTableViewCell: UITableViewCell {
     
     @IBOutlet var movieTitleLabel: UILabel!
     @IBOutlet var appreciationDateLabel: UILabel!
+    @IBOutlet var rightAngleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        rightAngleLabel.font = UIFont(name: "FontAwesome5Free-Solid", size: 17)
+        rightAngleLabel.text = "angle-right"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
