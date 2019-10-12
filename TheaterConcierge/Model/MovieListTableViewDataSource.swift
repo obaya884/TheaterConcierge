@@ -13,17 +13,30 @@ final class MovieListTableViewDataSource: NSObject, UITableViewDataSource, UITab
     
     private let firebaseManager = FirebaseManager.shared
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(firebaseManager.movieInfoArray.count)
+    func numberOfSections(in tableView: UITableView) -> Int {
         return firebaseManager.movieInfoArray.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+//        return firebaseManager.movieInfoArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 15))
+        footerView.backgroundColor = .white
+        return footerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 15
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieListTableViewCell") as! MovieListTableViewCell
         
-        cell.movieTitleLabel.text = firebaseManager.movieInfoArray[indexPath.row].movieTitle
-        cell.appreciationDateLabel.text = firebaseManager.movieInfoArray[indexPath.row].appreciationDate
-        
+        cell.movieTitleLabel.text = firebaseManager.movieInfoArray[indexPath.section].movieTitle
+        cell.appreciationDateLabel.text = firebaseManager.movieInfoArray[indexPath.section].appreciationDate
         return cell
     }
 }

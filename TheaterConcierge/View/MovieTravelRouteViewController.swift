@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 import CoreLocation
 import SwiftyUserDefaults
+import SafariServices
 
 final class MovieTravelRouteViewController: UIViewController {
 
@@ -21,6 +22,7 @@ final class MovieTravelRouteViewController: UIViewController {
     private var currentAddress = LocationManager.sharedInstance.currentAddress
     
     @IBOutlet var webView: WKWebView!
+    @IBOutlet var webContainerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,7 @@ final class MovieTravelRouteViewController: UIViewController {
         if let url = NSURL(string: requestUrl.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!) {
             print(requestUrl)
             let request = NSURLRequest(url: url as URL)
+            // TODO: web版が表示されるので、SafariViewとかで綺麗に表示したい
             webView.load(request as URLRequest)
         }
     }

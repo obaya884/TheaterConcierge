@@ -68,6 +68,7 @@ final class MovieDetailViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         firebaseManager.fetchMovieInfo(){
             NotificationCenter.default.post(name: .firestoreInitialLoadingFinishNotification, object: nil)
         }
@@ -120,5 +121,4 @@ final class MovieDetailViewController: UIViewController {
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
         updateView()
     }
-    
 }

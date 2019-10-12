@@ -20,12 +20,11 @@ final class MovieListViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(self.setupTableView(_:)), name: .firestoreInitialLoadingFinishNotification, object: nil)
+        super.viewWillAppear(animated)
     }
 
     @objc func setupTableView(_ notification: Notification) {
@@ -44,7 +43,7 @@ final class MovieListViewController: UIViewController {
 
 extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Defaults[.movieListOrder] = indexPath.row
+        Defaults[.movieListOrder] = indexPath.section
         self.performSegue(withIdentifier: "MovieDetailViewControllerSegue", sender: nil)
     }
 }

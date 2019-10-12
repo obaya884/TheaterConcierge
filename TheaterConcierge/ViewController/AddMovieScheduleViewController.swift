@@ -215,6 +215,8 @@ extension AddMovieScheduleViewController: UITextFieldDelegate {
                 self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y - (editingTextFieldY - (keyboardY - 60)), width: self.view.bounds.width, height: self.view.bounds.height)
             }, completion: nil)
         }
+        
+        
     }
     
     @objc private func keyboardWillHide(_ notification: Notification) {

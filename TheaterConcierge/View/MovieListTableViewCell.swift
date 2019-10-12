@@ -18,6 +18,9 @@ final class MovieListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         rightAngleLabel.font = UIFont(name: "FontAwesome5Free-Solid", size: 17)
         rightAngleLabel.text = "angle-right"
+        contentView.backgroundColor = UIColor(hex: "7697CA")
+        contentView.layer.cornerRadius = 12
+        contentView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
